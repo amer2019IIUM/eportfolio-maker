@@ -1,0 +1,42 @@
+created:
+    - database/factories/ProjectFactory.php
+    - database/factories/AttachmentFactory.php
+    - database/factories/TechnologyFactory.php
+    - database/factories/ProjectTechnologyFactory.php
+    - database/factories/ExperienceFactory.php
+    - database/factories/UserFactory.php
+    - database/factories/ProfileFactory.php
+    - database/factories/InterestFactory.php
+    - database/factories/SkillFactory.php
+    - database/factories/EducationFactory.php
+    - database/migrations/2021_11_27_083855_create_projects_table.php
+    - database/migrations/2021_11_27_083856_create_attachments_table.php
+    - database/migrations/2021_11_27_083857_create_technologies_table.php
+    - database/migrations/2021_11_27_083858_create_project_technologies_table.php
+    - database/migrations/2021_11_27_083859_create_experiences_table.php
+    - database/migrations/2021_11_27_083900_create_users_table.php
+    - database/migrations/2021_11_27_083901_create_profiles_table.php
+    - database/migrations/2021_11_27_083902_create_interests_table.php
+    - database/migrations/2021_11_27_083903_create_skills_table.php
+    - database/migrations/2021_11_27_083904_create_education_table.php
+    - app/Models/Project.php
+    - app/Models/Attachment.php
+    - app/Models/Technology.php
+    - app/Models/ProjectTechnology.php
+    - app/Models/Experience.php
+    - app/Models/User.php
+    - app/Models/Profile.php
+    - app/Models/Interest.php
+    - app/Models/Skill.php
+    - app/Models/Education.php
+models:
+    Project: { id: increments, lang: string, title: string, desc: longText, progress: integer, source_code: string, icon: string, last_update: date, hidden: boolean, user_id: integer, sort: integer }
+    Attachment: { id: increments, title: string, link: string, attachable_id: integer, attachable_type: string, type: string }
+    Technology: { id: increments, title: string, version: string }
+    ProjectTechnology: { id: increments, project_id: integer, technology_id: integer }
+    Experience: { id: increments, lang: string, company: string, from: date, to: date, job_title: string, core_duties: json, location: text, further_details: text, user_id: integer }
+    User: { id: increments, email: string, linkedin: string, twitter: string, facebook: string, github: string, phone_no: string }
+    Profile: { id: increments, first_name: string, last_name: string, lang: string, user_id: integer, country: string, city: string, nationality: string, summary: string, headline: string }
+    Interest: { id: increments, lang: string, title: string, user_id: integer, sort: integer }
+    Skill: { id: increments, lang: string, type: string, title: string, sort: integer, user_id: integer }
+    Education: { id: increments, lang: string, degree: string, from: string, to: string, CGPA: double, headline: string, school: string, country: string, city: string, hidden: boolean, user_id: integer }

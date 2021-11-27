@@ -1,0 +1,84 @@
+models:
+  Project:
+    id: increments
+    lang: string
+    title: string
+    desc: longText
+    progress: integer
+    source_code: string
+    icon: string
+    last_update: date
+    hidden: boolean
+    user_id: integer
+    sort: integer
+  Attachment:
+    id: increments
+    title: string
+    link: string
+    attachable_id: integer
+    attachable_type: string
+    type: string
+  Technology:
+    id: increments
+    title: string
+    version: string
+  ProjectTechnology:
+    id: increments
+    project_id: integer
+    technology_id: integer
+  Experience:
+    id: increments
+    lang: string
+    company: string
+    from: date
+    to: date
+    job_title: string
+    core_duties: json
+    location: text
+    further_details: text
+    user_id: integer
+  User:
+    id: increments
+    email: string
+    linkedin: string
+    twitter: string
+    facebook: string
+    github: string
+    phone_no: string
+  Profile:
+    id: increments
+    first_name: string
+    last_name: string
+    lang: string
+    user_id: integer
+    country: string
+    city: string
+    nationality: string
+    summary: string
+    headline: string
+  Interest:
+    id: increments
+    lang: string
+    title: string
+    user_id: integer
+    sort: integer
+  Skill:
+    id: increments
+    lang: string
+    type: string
+    title: string
+    sort: integer
+    user_id: integer
+  Education:
+    id: increments
+    lang: string
+    degree: string
+    from: string
+    to: string
+    CGPA: double
+    headline: string
+    school: string
+    country: string
+    city: string
+    hidden: boolean
+    user_id: integer
