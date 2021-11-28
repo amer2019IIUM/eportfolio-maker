@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\ProjectTechnology;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ProjectTechnologySeeder extends Seeder
 {
@@ -14,6 +15,12 @@ class ProjectTechnologySeeder extends Seeder
      */
     public function run()
     {
-        ProjectTechnology::factory()->count(2)->create();
-    }
+        DB::table('project_technology')->delete();
+
+        $project_technologies=array(
+         array('id' => '1', 'project_id'=>1, 'technology_id'=>1, ),
+         array('id' => '2', 'project_id'=>1, 'technology_id'=>1),
+        );
+ 
+        DB::table('project_technology')->insert($project_technologies);       }
 }

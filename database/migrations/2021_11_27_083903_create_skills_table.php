@@ -19,7 +19,7 @@ class CreateSkillsTable extends Migration
             $table->string('type');
             $table->string('title');
             $table->integer('sort');
-            $table->integer('user_id');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

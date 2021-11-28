@@ -17,7 +17,7 @@ class CreateInterestsTable extends Migration
             $table->increments('id');
             $table->string('lang');
             $table->string('title');
-            $table->integer('user_id');
+            $table->foreignId('user_id')->constrained('users');
             $table->integer('sort');
             $table->timestamps();
         });

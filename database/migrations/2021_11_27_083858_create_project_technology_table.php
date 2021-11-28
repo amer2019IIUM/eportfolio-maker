@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProjectTechnologiesTable extends Migration
+class CreateProjectTechnologyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateProjectTechnologiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('project_technologies', function (Blueprint $table) {
+        Schema::create('project_technology', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('project_id');
-            $table->integer('technology_id');
+            $table->foreignId('project_id');
+            $table->foreignId('technology_id');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateProjectTechnologiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('project_technologies');
+        Schema::dropIfExists('project_technology');
     }
 }

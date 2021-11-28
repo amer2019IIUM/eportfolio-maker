@@ -18,12 +18,12 @@ class CreateProfilesTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('lang');
-            $table->integer('user_id');
             $table->string('country');
             $table->string('city');
             $table->string('nationality');
             $table->string('summary');
             $table->string('headline');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

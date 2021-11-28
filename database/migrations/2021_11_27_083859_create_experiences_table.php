@@ -23,7 +23,7 @@ class CreateExperiencesTable extends Migration
             $table->string('core_duties');
             $table->text('location');
             $table->text('further_details');
-            $table->integer('user_id');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

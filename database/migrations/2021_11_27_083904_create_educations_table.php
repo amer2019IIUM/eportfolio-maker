@@ -25,7 +25,7 @@ class CreateEducationsTable extends Migration
             $table->string('country');
             $table->string('city');
             $table->boolean('hidden');
-            $table->integer('user_id');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

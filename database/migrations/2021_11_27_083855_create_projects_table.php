@@ -22,8 +22,8 @@ class CreateProjectsTable extends Migration
             $table->string('source_code');
             $table->string('icon');
             $table->date('last_update');
+            $table->foreignId('user_id')->constrained('users');
             $table->boolean('hidden');
-            $table->integer('user_id');
             $table->integer('sort');
             $table->timestamps();
         });
