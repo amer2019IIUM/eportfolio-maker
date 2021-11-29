@@ -1,0 +1,25 @@
+extend type Query {
+    users(orderBy: _ @orderBy(columnsEnum: "UserColumns")): [User!]!
+        @paginate(type: PAGINATOR, defaultCount: 10)
+
+    user(id: ID @eq): User @find
+}
+
+type User {
+    id: ID!
+    email: String!
+    linkedin: String
+    twitter: String
+    facebook: String
+    github: String!
+    phone_no: String
+    created_at: DateTime
+    updated_at: DateTime
+    projects: [Project!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    educations: [Education!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    experiences: [Experience!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    interests: [Interest!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    profiles: [Profile!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    skills: [Skill!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}

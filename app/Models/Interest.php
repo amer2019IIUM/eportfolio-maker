@@ -24,6 +24,7 @@ class Interest extends Model
 
        /**
      * @return BelongsTo
+     * Get the interest's user.
      */
     public function user(): BelongsTo
     {

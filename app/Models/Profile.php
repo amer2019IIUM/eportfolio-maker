@@ -29,6 +29,7 @@ class Profile extends Model
 
        /**
      * @return BelongsTo
+     * Profile's user
      */
     public function user(): BelongsTo
     {

@@ -1,0 +1,23 @@
+extend type Query {
+    educations(
+        orderBy: _ @orderBy(columnsEnum: "EducationColumns")
+    ): [Project!]! @paginate(type: PAGINATOR, defaultCount: 10)
+    education(id: ID @eq): Education @find
+}
+
+type Education {
+    id: ID!
+    lang: String!
+    degree: String!
+    from: String!
+    to: String!
+    CGPA: Float!
+    headline: String
+    school: String
+    country: String
+    city: String
+    hidden: Boolean
+    created_at: DateTime
+    updated_at: DateTime
+    user: User @belongsTo
+}

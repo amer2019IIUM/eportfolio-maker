@@ -1,0 +1,16 @@
+extend type Query {
+    technologies(
+        orderBy: _ @orderBy(columnsEnum: "TechnologyColumns")
+    ): [Technology!]! @paginate(type: PAGINATOR, defaultCount: 10)
+    technology(id: ID @eq): Technology @find
+}
+
+type Technology {
+    id: ID!
+    title: String!
+    version: String!
+    created_at: DateTime
+    updated_at: DateTime
+    projects: [Project!]! @belongsToMany
+    attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}

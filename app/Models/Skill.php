@@ -25,6 +25,7 @@ class Skill extends Model
 
        /**
      * @return BelongsTo
+     * skill's user
      */
     public function user(): BelongsTo
     {

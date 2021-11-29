@@ -39,6 +39,7 @@ class Experience extends Model
     ];
     
     /**
+     * Get the experience's user.
      * @return BelongsTo
      */
     public function user(): BelongsTo

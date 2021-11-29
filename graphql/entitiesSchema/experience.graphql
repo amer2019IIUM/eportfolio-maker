@@ -1,0 +1,21 @@
+extend type Query {
+    experiences(
+        orderBy: _ @orderBy(columnsEnum: "ExperienceColumns")
+    ): [Experience!]! @paginate(type: PAGINATOR, defaultCount: 10)
+    experience(id: ID @eq): Experience @find
+}
+
+type Experience {
+    id: ID!
+    lang: String!
+    company: String
+    from: DateTime
+    to: DateTime
+    job_title: String
+    core_duties: String
+    location: String
+    further_details: String
+    created_at: DateTime
+    updated_at: DateTime
+    user: User @belongsTo
+}

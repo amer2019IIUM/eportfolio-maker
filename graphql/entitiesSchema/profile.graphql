@@ -1,0 +1,21 @@
+extend type Query {
+    profiles(orderBy: _ @orderBy(columnsEnum: "ProfileColumns")): [Profile!]!
+        @paginate(type: PAGINATOR, defaultCount: 10)
+    profile(id: ID @eq): Profile @find
+}
+
+type Profile {
+    id: ID!
+    first_name: String!
+    last_name: String!
+    lang: String
+    country: String
+    city: String
+    nationality: String
+    summary: String
+    headline: String
+    created_at: DateTime
+    updated_at: DateTime
+    user: User @belongsTo
+    attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}

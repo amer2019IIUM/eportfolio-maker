@@ -41,6 +41,7 @@ class Project extends Model
 
        /**
      * @return BelongsTo
+     * project's user
      */
     public function user(): BelongsTo
     {
@@ -49,6 +50,7 @@ class Project extends Model
 
     /**
      * @return BelongsToMany
+     * project's technologies
      */
     public function technologies(): BelongsToMany
     {

@@ -25,9 +25,7 @@ class Education extends Model
         'school',
         'country',
         'city',
-        'hidden',
-        'user_id',
-    ];
+      ];
 
     /**
      * The attributes that should be cast to native types.
@@ -40,6 +38,7 @@ class Education extends Model
     ];
 
     /**
+     * Get the comment's user.
      * @return BelongsTo
      */
     public function user(): BelongsTo

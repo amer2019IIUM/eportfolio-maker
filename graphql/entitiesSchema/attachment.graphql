@@ -1,0 +1,20 @@
+extend type Query {
+    attachments(
+        orderBy: _ @orderBy(columnsEnum: "AttachmentColumns")
+    ): [Attachment!]! @paginate(type: PAGINATOR, defaultCount: 10)
+
+    attachment(id: ID @eq): Attachment @find
+}
+
+type Attachment {
+    id: ID!
+    title: String!
+    link: String!
+    attachable_id: Int!
+    attachable_type: String!
+    type: String!
+    created_at: DateTime
+    updated_at: DateTime
+    attachable: Attachable! @morphTo
+}
+union Attachable = Profile | User | Project | Skill

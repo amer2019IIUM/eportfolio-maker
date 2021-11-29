@@ -26,6 +26,7 @@ class User extends Model
 
      /**
      * @return HasMany
+     * Get user's educations
      */
     public function educations(): HasMany
     {
@@ -34,6 +35,7 @@ class User extends Model
     
      /**
      * @return HasMany
+     * Get user's experiences
      */
     public function experiences(): HasMany
     {
@@ -42,6 +44,7 @@ class User extends Model
 
      /**
      * @return HasMany
+     * Get user's interests
      */
     public function interests(): HasMany
     {
@@ -50,6 +53,7 @@ class User extends Model
 
      /**
      * @return HasMany
+     * Get user's profiles
      */
     public function profiles(): HasMany
     {
@@ -58,6 +62,7 @@ class User extends Model
     
          /**
      * @return HasMany
+     * Get user's projects
      */
     public function projects(): HasMany
     {
@@ -66,6 +71,7 @@ class User extends Model
 
              /**
      * @return HasMany
+     * Get user's skills
      */
     public function skills(): HasMany
     {

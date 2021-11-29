@@ -1,0 +1,23 @@
+extend type Query {
+    projects(orderBy: _ @orderBy(columnsEnum: "ProjectColumns")): [Project!]!
+        @paginate(type: PAGINATOR, defaultCount: 10)
+    project(id: ID @eq): Project @find
+}
+
+type Project {
+    id: ID!
+    lang: String!
+    title: String!
+    desc: String
+    progress: Int!
+    source_code: String
+    icon: String
+    last_update: DateTime
+    hidden: Boolean
+    sort: Int
+    created_at: DateTime
+    updated_at: DateTime
+    user: User @belongsTo
+    technologies: [Technology!]! @belongsToMany
+    attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}

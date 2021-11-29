@@ -1,0 +1,126 @@
+#import entitiesSchema/*.graphql
+
+"A date string with format `Y-m-d`, e.g. `2011-05-23`."
+scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
+
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
+scalar DateTime
+    @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+###################( User )############################
+enum UserColumns {
+    ID
+    EMAIL
+    LINKEDIN
+    TWITTER
+    FACEBOOK
+    GITHUB
+    PHONE_NO
+    CREATED_AT
+    UPDATED_AT
+}
+
+###################( Project )############################
+enum ProjectColumns {
+    ID
+    LANG
+    TITLE
+    DESC
+    PROGRESS
+    SOURCE_CODE
+    ICON
+    LAST_UPDATE
+    HIDDEN
+    SORT
+    CREATED_AT
+    UPDATED_AT
+}
+
+###################( Education )############################
+enum EducationColumns {
+    ID
+    LANG
+    DEGREE
+    FROM
+    TO
+    CGPA
+    HEADLINE
+    SCHOOL
+    COUNTRY
+    CITY
+    HIDDEN
+    CREATED_AT
+    UPDATED_AT
+}
+
+###################( Experience )############################
+enum ExperienceColumns {
+    ID
+    LANG
+    COMPANY
+    FROM
+    TO
+    JOB_TITLE
+    CORE_DUTIES
+    LOCATION
+    FUTHER_DETAILS
+    CREATED_AT
+    UPDATED_AT
+}
+
+###################( Interest )############################
+enum InterestColumns {
+    ID
+    LANG
+    TITLE
+    SORT
+    CREATED_AT
+    UPDATED_AT
+}
+
+###################( Profile )############################
+enum ProfileColumns {
+    ID
+    FIRST_NAME
+    LAST_NAME
+    LANG
+    COUNTRY
+    CITY
+    NATIONALITY
+    SUMMARY
+    HEADLINE
+    CREATED_AT
+    UPDATED_AT
+}
+
+###################( Skill )############################
+enum SkillColumns {
+    ID
+    LANG
+    TYPE
+    TITLE
+    SORT
+    CREATED_AT
+    UPDATED_AT
+}
+
+###################( Technology )############################
+enum TechnologyColumns {
+    ID
+    TITLE
+    VERSION
+    CREATED_AT
+    UPDATED_AT
+}
+
+###################( Attachment )############################
+enum AttachmentColumns {
+    ID
+    TITLE
+    LINK
+    ATTACHABLE_ID
+    ATTACHABLE_TYPE
+    TYPE
+    CREATED_AT
+    UPDATED_AT
+}

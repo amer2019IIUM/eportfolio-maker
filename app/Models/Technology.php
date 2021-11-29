@@ -22,6 +22,7 @@ class Technology extends Model
 
         /**
      * @return BelongsToMany
+     * techology's projects
      */
     public function projects(): BelongsToMany
     {

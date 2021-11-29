@@ -1,0 +1,17 @@
+extend type Query {
+    skills(orderBy: _ @orderBy(columnsEnum: "SkillColumns")): [Skill!]!
+        @paginate(type: PAGINATOR, defaultCount: 10)
+    skill(id: ID @eq): Skill @find
+}
+
+type Skill {
+    id: ID!
+    title: String
+    lang: String!
+    type: String!
+    sort: Int!
+    created_at: DateTime
+    updated_at: DateTime
+    user: User @belongsTo
+    attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}

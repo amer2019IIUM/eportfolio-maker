@@ -1,0 +1,15 @@
+extend type Query {
+    interests(orderBy: _ @orderBy(columnsEnum: "ProjectColumns")): [Interest!]!
+        @paginate(type: PAGINATOR, defaultCount: 10)
+    interest(id: ID @eq): Interest @find
+}
+
+type Interest {
+    id: ID!
+    lang: String!
+    title: String!
+    sort: Int
+    created_at: DateTime
+    updated_at: DateTime
+    user: User @belongsTo
+}
