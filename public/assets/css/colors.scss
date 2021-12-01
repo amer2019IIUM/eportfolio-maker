@@ -1,0 +1,306 @@
+
+
+.white-vertion {
+    .page-item {
+        &.active {
+            .page-link {
+                color: $main-color;
+            }
+        }
+    }
+}
+.dark-vertion {
+    .page-item {
+        &.active {
+            .page-link {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.mh-header {
+    .navbar-nav {
+        li {
+            a {
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+.mh-home-2 {
+    .mh-header-info {
+        ul {
+           li {
+
+           }
+           &.mh-home-contact {
+               li {
+                    &:hover {
+                        .fa {
+                            color: $main-color;
+                        }
+                    }
+               }
+               
+           }
+       }
+    }
+}
+.mh-home {
+    .mh-header-info {
+        .mh-promo {
+            span {
+                background-color: $main-color;
+            }
+        }
+        ul {
+            li {
+                &:hover {
+                    .fa {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}
+.mh-about-tag {
+    ul {
+        li {
+            span {
+                border: 1px solid $main-color;
+                &:hover {
+                    background-color: $main-color;
+                }
+            }
+            
+        }
+    }
+}
+.mh-progress path:nth-child(2) {
+  stroke: $main-color;
+}
+
+.candidatos {
+    .parcial {
+        .percentagem {
+            background: $main-color;
+        }
+    }
+}
+
+.mh-experince {
+    .mh-education-deatils {
+        .mh-education-item {
+            .mh-eduyear {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.mh-work {
+    .mh-experience-deatils {
+        .mh-work-item {
+            .mh-eduyear {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.portfolio-nav {
+    ul {
+        li {
+            &:hover {
+                color: $main-color;
+            }
+            &.active {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.mh-pricing {
+    .mh-pricing {
+        &:hover {
+            .btn {
+                background-color: darken($main-color, 5%);
+            }
+        }
+        .fa {
+            color: lighten($main-color, 30%);
+        }
+        h5 {
+            color: $main-color;
+        }
+    }
+}
+
+
+.mh-blog {
+    .mh-blog-item {
+        .blog-inner {
+            a {
+                color: $main-color;
+            }
+        }
+        h2 {
+            color: $main-color;
+            a {
+                color: $main-color;
+                &:hover {
+                    color: darken($main-color, 2%);
+                }
+            }
+        }
+    }
+}
+
+.mh-testimonial {
+    .mh-client-item {
+        img {
+            border: 5px solid $main-color;;
+        }
+    }
+    .owl-controls .owl-dots .owl-dot {
+      border: 1px solid $main-color;
+    }
+    .owl-controls .owl-dots .owl-dot.active {
+      background-color: $main-color;
+    }
+}
+
+.mh-footer-address {
+    .mh-address-footer-item {
+        .each-icon {
+            .fa {
+                border-color: $main-color;
+            }            
+        }
+    }
+}
+
+
+
+.old {
+    .navbar-collapse {
+        background-color: $main-color;
+    }
+    .navbar-header .navbar-toggler .icon-bar {
+        background-color: $main-color;
+    }
+    .navbar-collapse {
+        background-color: $main-color;
+    }
+}
+
+.new {
+    .navbar-collapse {
+        background-color: $main-color;
+    }
+    .navbar-header .navbar-toggler .icon-bar {
+        background-color: $main-color;
+    }
+    .navbar-collapse {
+        background-color: $main-color;
+    }
+}
+.portfolio-nav {
+    ul {
+        li {
+            &.current {
+                span {
+                    border-bottom: 2px solid $main-color;
+                }
+            }
+        }
+    }
+}
+
+.mh-project-gallery {
+    .grid-item {
+        figure  {
+            &:hover {
+                figcaption {
+                    background: rgba($main-color, 0.90);
+                }
+            }
+        }
+    }
+}
+
+
+.mh-featured-project {
+    .mh-featured-item {
+        .mh-featured-project-content {
+            .project-category {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.mh-single-project-slide {
+    .owl-controls .owl-dots .owl-dot {
+      border: 1px solid $main-color;
+    }
+    .owl-controls .owl-dots .owl-dot.active {
+      background-color: $main-color;
+    }
+}
+
+
+.mh-service {
+    .mh-service-item {
+        a {
+            color: $main-color;
+        }
+    }
+}
+.mh-pagination {
+    .page-link {
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+.mh-author-info {
+    .social-icon {
+        li {
+            a {
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+.mh-blog-category {
+    ul {
+        li {
+            a {
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+.mh-blog-next-prev-post {
+    a {
+        color: $main-color;
+    }
+}
+.comment-deatils {
+    span {
+        color: $main-color;
+    }
+}

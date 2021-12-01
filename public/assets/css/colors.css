@@ -1,0 +1,117 @@
+/*
+================
+ VARIABLES
+================
+*/
+.white-vertion .page-item.active .page-link {
+  color: #0bceaf; }
+
+.dark-vertion .page-item.active .page-link {
+  color: #0bceaf; }
+
+.mh-header .navbar-nav li a:hover {
+  color: #0bceaf; }
+
+.mh-home-2 .mh-header-info ul.mh-home-contact li:hover .fa {
+  color: #0bceaf; }
+
+.mh-home .mh-header-info .mh-promo span {
+  background-color: #0bceaf; }
+.mh-home .mh-header-info ul li:hover .fa {
+  color: #0bceaf; }
+
+.mh-about-tag ul li span {
+  border: 1px solid #0bceaf; }
+  .mh-about-tag ul li span:hover {
+    background-color: #0bceaf; }
+
+.mh-progress path:nth-child(2) {
+  stroke: #0bceaf; }
+
+.candidatos .parcial .percentagem {
+  background: #0bceaf; }
+
+.mh-experince .mh-education-deatils .mh-education-item .mh-eduyear {
+  color: #0bceaf; }
+
+.mh-work .mh-experience-deatils .mh-work-item .mh-eduyear {
+  color: #0bceaf; }
+
+.portfolio-nav ul li:hover {
+  color: #0bceaf; }
+.portfolio-nav ul li.active {
+  color: #0bceaf; }
+
+.mh-pricing .mh-pricing:hover .btn {
+  background-color: #0ab69a; }
+.mh-pricing .mh-pricing .fa {
+  color: #0ab69a; }
+.mh-pricing .mh-pricing h5 {
+  color: #0bceaf; }
+
+.mh-blog .mh-blog-item .blog-inner a {
+  color: #0bceaf; }
+.mh-blog .mh-blog-item h2 {
+  color: #0bceaf; }
+  .mh-blog .mh-blog-item h2 a {
+    color: #0bceaf; }
+    .mh-blog .mh-blog-item h2 a:hover {
+      color: #0ac4a7; }
+
+.mh-testimonial .mh-client-item img {
+  border: 5px solid #0bceaf; }
+.mh-testimonial .owl-controls .owl-dots .owl-dot {
+  border: 1px solid #0bceaf; }
+.mh-testimonial .owl-controls .owl-dots .owl-dot.active {
+  background-color: #0bceaf; }
+
+.mh-footer-address .mh-address-footer-item .each-icon .fa {
+  border-color: #0bceaf; }
+
+.old .navbar-collapse {
+  background-color: #0bceaf; }
+.old .navbar-header .navbar-toggler .icon-bar {
+  background-color: #0bceaf; }
+.old .navbar-collapse {
+  background-color: #0bceaf; }
+
+.new .navbar-collapse {
+  background-color: #0bceaf; }
+.new .navbar-header .navbar-toggler .icon-bar {
+  background-color: #0bceaf; }
+.new .navbar-collapse {
+  background-color: #0bceaf; }
+
+.portfolio-nav ul li.current span {
+  border-bottom: 2px solid #0bceaf; }
+
+.mh-project-gallery .grid-item figure:hover figcaption {
+  background: rgba(11, 206, 175, 0.9); }
+
+.mh-featured-project .mh-featured-item .mh-featured-project-content .project-category {
+  color: #0bceaf; }
+
+.mh-single-project-slide .owl-controls .owl-dots .owl-dot {
+  border: 1px solid #0bceaf; }
+.mh-single-project-slide .owl-controls .owl-dots .owl-dot.active {
+  background-color: #0bceaf; }
+
+.mh-service .mh-service-item a {
+  color: #0bceaf; }
+
+.mh-pagination .page-link:hover {
+  color: #0bceaf; }
+
+.mh-author-info .social-icon li a:hover {
+  color: #0bceaf; }
+
+.mh-blog-category ul li a:hover {
+  color: #0bceaf; }
+
+.mh-blog-next-prev-post a {
+  color: #0bceaf; }
+
+.comment-deatils span {
+  color: #0bceaf; }
+
+/*# sourceMappingURL=colors.css.map */
