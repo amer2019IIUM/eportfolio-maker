@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $graphQLquery = '{"query": " query{
+        users{
+          data{
+            id
+            email
+          }
+        }
+      } "}';
+
+     
+    $response = (new Client)->request('post', 'http://127.0.0.1:8000/graphql', [
+        'headers' => [
+         'Content-Type' => 'application/json'
+        ],
+        'body' => $graphQLquery
+    ]);
+    dd($response);
+ });

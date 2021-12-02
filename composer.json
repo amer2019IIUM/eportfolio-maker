@@ -11,7 +11,8 @@
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "nuwave/lighthouse": "^5.26"
+        "mll-lab/laravel-graphql-playground": "^2.5",
+        "nuwave/lighthouse": "^5.27"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
