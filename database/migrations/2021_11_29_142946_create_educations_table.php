@@ -17,6 +17,7 @@ class CreateEducationsTable extends Migration
             $table->increments('id');
             $table->string('lang');
             $table->string('degree');
+            $table->text('desc');
             $table->string('from');
             $table->string('to');
             $table->double('CGPA');
@@ -24,8 +25,8 @@ class CreateEducationsTable extends Migration
             $table->string('school');
             $table->string('country');
             $table->string('city');
-            $table->boolean('hidden');
-            $table->foreignId('user_id')->constrained('users');
+            $table->boolean('hidden_resume')->nullable();
+            $table->boolean('hidden_portfolio')->nullable();            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

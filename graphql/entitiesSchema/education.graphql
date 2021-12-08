@@ -16,7 +16,9 @@ type Education {
     school: String
     country: String
     city: String
-    hidden: Boolean
+    desc: String
+    hidden_portfolio: Boolean
+    hidden_resume: Boolean
     created_at: DateTime
     updated_at: DateTime
     user: User @belongsTo

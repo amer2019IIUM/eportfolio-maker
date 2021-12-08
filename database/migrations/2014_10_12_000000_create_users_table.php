@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('linkedin')->nullable();
             $table->string('twitter')->nullable();
             $table->string('facebook')->nullable();
+            $table->string('dribbble')->nullable();
             $table->string('github');
             $table->string('phone_no');
              $table->timestamps();

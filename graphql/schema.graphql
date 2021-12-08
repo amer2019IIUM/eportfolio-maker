@@ -15,6 +15,7 @@ enum UserColumns {
     TWITTER
     FACEBOOK
     GITHUB
+    DRIBBBLE
     PHONE_NO
     CREATED_AT
     UPDATED_AT
@@ -30,7 +31,8 @@ enum ProjectColumns {
     SOURCE_CODE
     ICON
     LAST_UPDATE
-    HIDDEN
+    HIDDEN_PORTFOLIO
+    HIDDEN_RESUME
     SORT
     CREATED_AT
     UPDATED_AT
@@ -40,6 +42,7 @@ enum ProjectColumns {
 enum EducationColumns {
     ID
     LANG
+    DESC
     DEGREE
     FROM
     TO
@@ -48,7 +51,8 @@ enum EducationColumns {
     SCHOOL
     COUNTRY
     CITY
-    HIDDEN
+    HIDDEN_PORTFOLIO
+    HIDDEN_RESUME
     CREATED_AT
     UPDATED_AT
 }
@@ -64,6 +68,8 @@ enum ExperienceColumns {
     CORE_DUTIES
     LOCATION
     FUTHER_DETAILS
+    HIDDEN_PORTFOLIO
+    HIDDEN_RESUME
     CREATED_AT
     UPDATED_AT
 }
@@ -74,6 +80,8 @@ enum InterestColumns {
     LANG
     TITLE
     SORT
+    HIDDEN_PORTFOLIO
+    HIDDEN_RESUME
     CREATED_AT
     UPDATED_AT
 }
@@ -99,7 +107,10 @@ enum SkillColumns {
     LANG
     TYPE
     TITLE
+    PERCENTAGE
     SORT
+    HIDDEN_PORTFOLIO
+    HIDDEN_RESUME
     CREATED_AT
     UPDATED_AT
 }

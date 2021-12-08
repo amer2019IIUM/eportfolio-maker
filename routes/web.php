@@ -16,21 +16,7 @@ use GuzzleHttp\Client;
 */
 
 Route::get('/', function () {
-    $graphQLquery = '{"query": " query{
-        users{
-          data{
-            id
-            email
-          }
-        }
-      } "}';
-
-     
-    $response = (new Client)->request('post', 'http://127.0.0.1:8000/graphql', [
-        'headers' => [
-         'Content-Type' => 'application/json'
-        ],
-        'body' => $graphQLquery
-    ]);
-    dd($response);
+ 
+  
+   
  });

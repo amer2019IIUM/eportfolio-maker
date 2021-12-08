@@ -20,6 +20,7 @@ class CreateProfilesTable extends Migration
             $table->string('lang');
             $table->string('country');
             $table->string('city');
+            $table->string('location')->nullable();
             $table->string('nationality');
             $table->string('summary');
             $table->string('headline');

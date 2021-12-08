@@ -10,6 +10,9 @@ type Skill {
     lang: String!
     type: String!
     sort: Int!
+    percentage: Int
+    hidden_portfolio: Boolean
+    hidden_resume: Boolean
     created_at: DateTime
     updated_at: DateTime
     user: User @belongsTo

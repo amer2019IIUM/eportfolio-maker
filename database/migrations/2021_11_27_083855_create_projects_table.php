@@ -23,7 +23,8 @@ class CreateProjectsTable extends Migration
             $table->string('icon');
             $table->date('last_update');
             $table->foreignId('user_id')->constrained('users');
-            $table->boolean('hidden');
+            $table->boolean('hidden_resume')->nullable();
+            $table->boolean('hidden_portfolio')->nullable();
             $table->integer('sort');
             $table->timestamps();
         });

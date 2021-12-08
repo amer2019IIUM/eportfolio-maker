@@ -24,6 +24,8 @@ class CreateExperiencesTable extends Migration
             $table->text('location');
             $table->text('further_details');
             $table->foreignId('user_id')->constrained('users');
+            $table->boolean('hidden_resume')->nullable();
+            $table->boolean('hidden_portfolio')->nullable();
             $table->timestamps();
         });
     }

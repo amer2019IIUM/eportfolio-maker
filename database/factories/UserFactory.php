@@ -27,6 +27,7 @@ class UserFactory extends Factory
             'linkedin' => $this->faker->word,
             'twitter' => $this->faker->word,
             'facebook' => $this->faker->word,
+            'dribbble' => $this->faker->word,
             'github' => $this->faker->word,
             'phone_no' => $this->faker->word,
         ];

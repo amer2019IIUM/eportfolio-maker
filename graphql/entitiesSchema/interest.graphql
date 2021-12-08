@@ -9,6 +9,8 @@ type Interest {
     lang: String!
     title: String!
     sort: Int
+    hidden_portfolio: Boolean
+    hidden_resume: Boolean
     created_at: DateTime
     updated_at: DateTime
     user: User @belongsTo

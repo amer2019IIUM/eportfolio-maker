@@ -13,6 +13,7 @@ type User {
     facebook: String
     github: String!
     phone_no: String
+    dribbble: String
     created_at: DateTime
     updated_at: DateTime
     projects: [Project!]! @hasMany(type: PAGINATOR, defaultCount: 10)
