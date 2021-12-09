@@ -17,5 +17,5 @@ type Profile {
     created_at: DateTime
     updated_at: DateTime
     user: User @belongsTo
-    attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+    attachments: [Attachment!]! @morphMany
 }

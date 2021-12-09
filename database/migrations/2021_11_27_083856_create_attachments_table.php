@@ -19,7 +19,8 @@ class CreateAttachmentsTable extends Migration
             $table->string('link');
             $table->integer('attachable_id');
             $table->string('attachable_type');
-            $table->string('type');
+            $table->enum('type', ["photo", "document", "audio", "video", "others"]);
+            $table->index(['attachable_id', 'attachable_type']);
             $table->timestamps();
         });
     }

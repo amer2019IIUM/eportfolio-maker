@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
             ProjectSeeder::class,
             ProjectTechnologySeeder::class,
             SkillSeeder::class,
-            TechnologySeeder::class
+            TechnologySeeder::class,
+            AttachmentSeeder::class
         ]);
     }
 }

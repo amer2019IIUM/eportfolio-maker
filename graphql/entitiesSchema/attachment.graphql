@@ -1,3 +1,8 @@
+extend type Mutation {
+    createAttachment(input: CreateAttachmentInputs!): Attachment! @create
+
+    deleteAttachment(attachable_id: Int!): Attachment @delete
+}
 extend type Query {
     attachments(
         orderBy: _ @orderBy(columnsEnum: "AttachmentColumns")
@@ -17,4 +22,26 @@ type Attachment {
     updated_at: DateTime
     attachable: Attachable! @morphTo
 }
-union Attachable = Profile | User | Project | Skill
+union Attachable = Project | Profile
+
+input CreateAttachmentInputs {
+    path: String
+    disk_name: String
+    type: AttachmentTypes!
+    file_name: String
+    thumbnail: Boolean
+    attachable: CreateAttachableMorphTo
+}
+input CreateAttachableMorphTo {
+    connect: ConnectAttachableInput
+    disconnect: Boolean
+    delete: Boolean
+}
+input ConnectAttachableInput {
+    type: AttachableTypes!
+    id: ID!
+}
+enum AttachableTypes {
+    ad
+    user
+}

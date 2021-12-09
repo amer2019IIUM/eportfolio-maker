@@ -20,5 +20,5 @@ type Project {
     updated_at: DateTime
     user: User @belongsTo
     technologies: [Technology!]! @belongsToMany
-    attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+    attachments: [Attachment!]! @morphMany
 }

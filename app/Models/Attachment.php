@@ -15,13 +15,10 @@ class Attachment extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'title',
-        'link',
-        'attachable_id',
-        'attachable_type',
-        'type',
-    ];
+    // protected $fillable = [
+    //     'title',
+    //     'link',
+    //  ];
 
     /**
      * Get the resource of the attachment
