@@ -1,7 +1,16 @@
+extend type Mutation {
+    createEducation(input: CreateEducationInput! @spread): Education @create
+
+    updateEducation(id: ID!, input: UpdateEducationInput! @spread): Education
+        @update
+
+    deleteEducation(id: ID!): Education @delete
+}
+
 extend type Query {
     educations(
         orderBy: _ @orderBy(columnsEnum: "EducationColumns")
-    ): [Project!]! @paginate(type: PAGINATOR, defaultCount: 10)
+    ): [Education!]! @paginate(type: PAGINATOR, defaultCount: 10)
     education(id: ID @eq): Education @find
 }
 
@@ -10,7 +19,7 @@ type Education {
     lang: String!
     degree: String!
     from: String!
-    to: String!
+    to: String
     CGPA: Float!
     headline: String
     school: String
@@ -22,4 +31,36 @@ type Education {
     created_at: DateTime
     updated_at: DateTime
     user: User @belongsTo
+}
+
+input CreateEducationInput {
+    id: ID!
+    lang: String!
+    degree: String!
+    from: String!
+    to: String
+    CGPA: Float!
+    headline: String
+    school: String
+    country: String
+    city: String
+    desc: String
+    user: CreateUserBelongsTo
+}
+
+input UpdateEducationInput {
+    lang: String
+    degree: String
+    from: String
+    to: String
+    CGPA: Float
+    headline: String
+    school: String
+    country: String
+    city: String
+    desc: String
+}
+
+input CreateUserBelongsTo {
+    connect: ID
 }

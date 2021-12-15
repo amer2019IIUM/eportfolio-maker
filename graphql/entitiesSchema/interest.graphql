@@ -1,6 +1,16 @@
+extend type Mutation {
+    createInterest(input: CreateInterestInput! @spread): Interest @create
+
+    updateInterest(id: ID!, input: UpdateInterestInput! @spread): Interest
+        @update
+
+    deleteInterest(id: ID!): Interest @delete
+}
+
 extend type Query {
-    interests(orderBy: _ @orderBy(columnsEnum: "ProjectColumns")): [Interest!]!
-        @paginate(type: PAGINATOR, defaultCount: 10)
+    interests(
+        orderBy: _ @orderBy(columnsEnum: "InterestColumns")
+    ): [Interest!]! @paginate(type: PAGINATOR, defaultCount: 10)
     interest(id: ID @eq): Interest @find
 }
 
@@ -14,4 +24,25 @@ type Interest {
     created_at: DateTime
     updated_at: DateTime
     user: User @belongsTo
+}
+
+input CreateInterestInput {
+    lang: String!
+    title: String!
+    sort: Int
+    hidden_portfolio: Boolean
+    hidden_resume: Boolean
+    user: CreateUserBelongsTo
+}
+
+input UpdateInterestInput {
+    lang: String
+    title: String
+    sort: Int
+    hidden_portfolio: Boolean
+    hidden_resume: Boolean
+}
+
+input CreateUserBelongsTo {
+    connect: ID
 }

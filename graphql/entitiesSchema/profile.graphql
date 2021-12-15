@@ -1,3 +1,11 @@
+extend type Mutation {
+    createProfile(input: CreateProfileInput! @spread): Profile @create
+
+    updateProfile(id: ID!, input: UpdateProfileInput! @spread): Profile @update
+
+    deleteProfile(id: ID!): Profile @delete
+}
+
 extend type Query {
     profiles(orderBy: _ @orderBy(columnsEnum: "ProfileColumns")): [Profile!]!
         @paginate(type: PAGINATOR, defaultCount: 10)
@@ -18,4 +26,47 @@ type Profile {
     updated_at: DateTime
     user: User @belongsTo
     attachments: [Attachment!]! @morphMany
+}
+
+input CreateProfileInput {
+    first_name: String!
+    last_name: String!
+    lang: String!
+    country: String!
+    city: String!
+    nationality: String!
+    summary: String!
+    headline: String!
+    attachments: CreateAttachmentBelongsToMany
+    user: CreateUserBelongsTo
+}
+
+input CreateAttachmentBelongsToMany {
+    connect: [ID!]
+    create: [CreateAttachmentHasManyInputs]
+    delete: [ID!]
+    connect: [ID!]
+    disconnect: [ID!]
+}
+
+input UpdateProfileInput {
+    first_name: String
+    last_name: String
+    lang: String
+    country: String
+    city: String
+    nationality: String
+    summary: String
+    headline: String
+    attachments: CreateAttachmentBelongsToMany
+}
+
+input CreateUserBelongsTo {
+    connect: ID
+}
+
+input CreateAttachmentHasManyInputs {
+    title: String
+    link: String
+    type: AttachmentTypes!
 }

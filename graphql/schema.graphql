@@ -27,6 +27,7 @@ enum ProjectColumns {
     LANG
     TITLE
     DESC
+    USED_TECHNOLOGIES
     PROGRESS
     SOURCE_CODE
     ICON

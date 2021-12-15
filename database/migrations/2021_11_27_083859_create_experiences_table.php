@@ -20,7 +20,7 @@ class CreateExperiencesTable extends Migration
             $table->date('from');
             $table->date('to');
             $table->string('job_title');
-            $table->string('core_duties');
+            $table->json('core_duties');
             $table->text('location');
             $table->text('further_details');
             $table->foreignId('user_id')->constrained('users');

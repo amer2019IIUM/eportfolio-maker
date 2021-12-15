@@ -1,3 +1,11 @@
+extend type Mutation {
+    createSkill(input: CreateSkillInput! @spread): Skill @create
+
+    updateSkill(id: ID!, input: UpdateSkillInput! @spread): Skill @update
+
+    deleteSkill(id: ID!): Skill @delete
+}
+
 extend type Query {
     skills(orderBy: _ @orderBy(columnsEnum: "SkillColumns")): [Skill!]!
         @paginate(type: PAGINATOR, defaultCount: 10)
@@ -16,5 +24,25 @@ type Skill {
     created_at: DateTime
     updated_at: DateTime
     user: User @belongsTo
-    attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}
+
+input CreateSkillInput {
+    title: String!
+    type: String!
+    lang: String
+    sort: Int
+    percentage: Int!
+    user: CreateUserBelongsTo
+}
+
+input UpdateSkillInput {
+    title: String
+    type: String
+    lang: String
+    sort: Int
+    percentage: Int
+}
+
+input CreateUserBelongsTo {
+    connect: ID
 }

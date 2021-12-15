@@ -20,7 +20,7 @@ class CreateInterestsTable extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->boolean('hidden_resume')->nullable();
             $table->boolean('hidden_portfolio')->nullable();
-            $table->integer('sort');
+            $table->integer('sort')->nullable();
             $table->timestamps();
         });
     }

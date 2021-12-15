@@ -1,3 +1,11 @@
+extend type Mutation {
+    createUser(input: CreateUserInput! @spread): User @create
+
+    updateUser(id: ID!, input: UpdateUserInput! @spread): User @update
+
+    deleteUser(id: ID!): User @delete
+}
+
 extend type Query {
     users(orderBy: _ @orderBy(columnsEnum: "UserColumns")): [User!]!
         @paginate(type: PAGINATOR, defaultCount: 10)
@@ -23,4 +31,24 @@ type User {
     profiles: [Profile!]! @hasMany(type: PAGINATOR, defaultCount: 10)
     skills: [Skill!]! @hasMany(type: PAGINATOR, defaultCount: 10)
     attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}
+
+input CreateUserInput {
+    email: String!
+    linkedin: String
+    twitter: String
+    facebook: String
+    github: String!
+    phone_no: String
+    dribbble: String
+}
+
+input UpdateUserInput {
+    email: String
+    linkedin: String
+    twitter: String
+    facebook: String
+    github: String
+    phone_no: String
+    dribbble: String
 }

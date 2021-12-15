@@ -37,6 +37,7 @@ class Project extends Model
      */
     protected $casts = [
         'last_update' => 'date',
+        'used_technologies' => 'array',
         'hidden' => 'boolean',
     ];
 

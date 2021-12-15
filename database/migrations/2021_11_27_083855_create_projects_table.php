@@ -18,14 +18,15 @@ class CreateProjectsTable extends Migration
             $table->string('lang');
             $table->string('title');
             $table->longText('desc');
+            $table->json('used_technologies');
             $table->integer('progress');
             $table->string('source_code');
             $table->string('icon');
-            $table->date('last_update');
+            $table->date('last_update')->nullable();
             $table->foreignId('user_id')->constrained('users');
             $table->boolean('hidden_resume')->nullable();
             $table->boolean('hidden_portfolio')->nullable();
-            $table->integer('sort');
+            $table->integer('sort')->nullable();
             $table->timestamps();
         });
     }

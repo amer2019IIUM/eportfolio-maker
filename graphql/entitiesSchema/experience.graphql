@@ -1,3 +1,14 @@
+extend type Mutation {
+    createExperience(input: CreateExperienceInput! @spread): Experience @create
+
+    updateExperience(
+        id: ID!
+        input: UpdateExperienceInput! @spread
+    ): Experience @update
+
+    deleteExperience(id: ID!): Experience @delete
+}
+
 extend type Query {
     experiences(
         orderBy: _ @orderBy(columnsEnum: "ExperienceColumns")
@@ -12,7 +23,7 @@ type Experience {
     from: DateTime
     to: DateTime
     job_title: String
-    core_duties: String
+    core_duties: [String]
     location: String
     further_details: String
     hidden_portfolio: Boolean
@@ -20,4 +31,34 @@ type Experience {
     created_at: DateTime
     updated_at: DateTime
     user: User @belongsTo
+}
+
+input CreateExperienceInput {
+    company: String!
+    lang:String
+    from: DateTime
+    to: DateTime
+    job_title: String!
+    core_duties: [String]
+    location: String
+    further_details: String
+    hidden_portfolio: Boolean
+    hidden_resume: Boolean
+    user: CreateUserBelongsTo
+}
+
+input UpdateExperienceInput {
+    company: String
+    from: DateTime
+    to: DateTime
+    job_title: String
+    core_duties: [String]
+    location: String
+    further_details: String
+    hidden_portfolio: Boolean
+    hidden_resume: Boolean
+}
+
+input CreateUserBelongsTo {
+    connect: ID!
 }

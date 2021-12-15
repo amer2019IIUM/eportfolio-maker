@@ -1,3 +1,11 @@
+extend type Mutation {
+    createProject(input: CreateProjectInput! @spread): Project @create
+
+    updateProject(id: ID!, input: UpdateProjectInput! @spread): Project @update
+
+    deleteProject(id: ID!): Project @delete
+}
+
 extend type Query {
     projects(orderBy: _ @orderBy(columnsEnum: "ProjectColumns")): [Project!]!
         @paginate(type: PAGINATOR, defaultCount: 10)
@@ -9,6 +17,7 @@ type Project {
     lang: String!
     title: String!
     desc: String
+    used_technologies: [String]
     progress: Int!
     source_code: String
     icon: String
@@ -21,4 +30,35 @@ type Project {
     user: User @belongsTo
     technologies: [Technology!]! @belongsToMany
     attachments: [Attachment!]! @morphMany
+}
+
+input CreateProjectInput {
+    title: String!
+    lang: String
+    desc: String
+    used_technologies: [String]
+    progress: Int!
+    source_code: String
+    icon: String
+    attachments: CreateAttachmentBelongsToMany
+    user: CreateUserBelongsTo
+}
+
+input CreateAttachmentBelongsToMany {
+    connect: [ID!]
+    create: [CreateAttachmentHasManyInputs]
+    delete: [ID!]
+    connect: [ID!]
+    disconnect: [ID!]
+}
+
+input UpdateProjectInput {
+    title: String!
+    lang: String
+    desc: String
+    used_technologies: [String]
+    progress: Int!
+    source_code: String
+    icon: String
+    attachments: CreateAttachmentBelongsToMany
 }
