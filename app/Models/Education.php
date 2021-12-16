@@ -36,6 +36,8 @@ class Education extends Model
     protected $casts = [
         'CGPA' => 'double',
         'hidden' => 'boolean',
+        'from'=>'date',
+        'to'=>'date',
     ];
 
     /**

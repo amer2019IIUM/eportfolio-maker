@@ -20,8 +20,8 @@ type Experience {
     id: ID!
     lang: String!
     company: String
-    from: DateTime
-    to: DateTime
+    from: Date
+    to: Date
     job_title: String
     core_duties: [String]
     location: String
@@ -35,9 +35,9 @@ type Experience {
 
 input CreateExperienceInput {
     company: String!
-    lang:String
-    from: DateTime
-    to: DateTime
+    lang: String
+    from: Date
+    to: Date
     job_title: String!
     core_duties: [String]
     location: String
@@ -49,8 +49,9 @@ input CreateExperienceInput {
 
 input UpdateExperienceInput {
     company: String
-    from: DateTime
-    to: DateTime
+    lang: String
+    from: Date
+    to: Date
     job_title: String
     core_duties: [String]
     location: String

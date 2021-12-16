@@ -18,8 +18,8 @@ type Education {
     id: ID!
     lang: String!
     degree: String!
-    from: String!
-    to: String
+    from: Date!
+    to: Date
     CGPA: Float!
     headline: String
     school: String
@@ -34,11 +34,10 @@ type Education {
 }
 
 input CreateEducationInput {
-    id: ID!
     lang: String!
     degree: String!
-    from: String!
-    to: String
+    from: Date!
+    to: Date
     CGPA: Float!
     headline: String
     school: String
@@ -51,8 +50,8 @@ input CreateEducationInput {
 input UpdateEducationInput {
     lang: String
     degree: String
-    from: String
-    to: String
+    from: Date
+    to: Date
     CGPA: Float
     headline: String
     school: String
