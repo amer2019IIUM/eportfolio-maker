@@ -4,6 +4,9 @@ extend type Mutation {
     updateUser(id: ID!, input: UpdateUserInput! @spread): User @update
 
     deleteUser(id: ID!): User @delete
+
+    ########################
+    login(input: LoginUserInput! @spread): AccessToken!
 }
 
 extend type Query {
@@ -11,10 +14,13 @@ extend type Query {
         @paginate(type: PAGINATOR, defaultCount: 10)
 
     user(id: ID @eq): User @find
+
+    currentUser: User @auth
 }
 
 type User {
     id: ID!
+    password: String!
     email: String!
     linkedin: String
     twitter: String
@@ -33,8 +39,15 @@ type User {
     attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
 }
 
+type AccessToken {
+    access_token: String
+    token_type: String
+}
+
+# USER INPUTS #
 input CreateUserInput {
     email: String!
+    password: String
     linkedin: String
     twitter: String
     facebook: String
@@ -45,10 +58,16 @@ input CreateUserInput {
 
 input UpdateUserInput {
     email: String
+    password: String
     linkedin: String
     twitter: String
     facebook: String
     github: String
     phone_no: String
     dribbble: String
+}
+
+input LoginUserInput {
+    email: String
+    password: String
 }

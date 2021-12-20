@@ -37,6 +37,10 @@ return [
 
             // Logs every incoming GraphQL query.
             // \Nuwave\Lighthouse\Support\Http\Middleware\LogGraphQLQueries::class,
+
+            
+            // Or this one when using Laravel Sanctum:
+            \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
         ],
 
         /*
@@ -57,7 +61,7 @@ return [
     |
     */
 
-    'guard' => 'api',
+    'guard' => 'sanctum',
 
     /*
     |--------------------------------------------------------------------------

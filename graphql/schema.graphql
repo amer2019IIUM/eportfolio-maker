@@ -10,7 +10,7 @@ scalar DateTime
 ###################( User )############################
 enum UserColumns {
     ID
-    EMAIL
+    PASSWORD
     LINKEDIN
     TWITTER
     FACEBOOK
